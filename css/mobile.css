@@ -1,0 +1,541 @@
+
+
+/* The whole profile will display in the direction of column */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin:-10px;
+}
+
+/* Define the entire welcome page */
+.welcome-container {
+  flex:1;
+  position: relative;
+}
+
+.welcome-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin-top: -20%;
+}
+
+.welcome-container .message {
+  position:absolute;
+  bottom: 33%;
+  right: 38%;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+}
+
+.welcome-container .dec-image {
+  position:absolute;
+  bottom: 24%;
+  right: 44%;
+  width:23vw;
+  object-fit: cover;
+  opacity: 0;
+}
+
+/* Animation */
+.welcome-span {
+  display:inline-block;
+  color:rgb(20, 20, 21);
+  color:  whitesmoke;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.welcome-span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.welcome-span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.welcome-span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.welcome-span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.welcome-span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Now define the structure for each section */
+/* Definte section container (default direction flex = row) to centralize each section
+in the profile page */
+.section-container
+ {
+    display:flex;
+    justify-content: center;
+    flex:1;
+    margin-left: 50px;
+    margin-right: 50px;
+    /* background-color: rgba(0, 0, 0, 0.127); */
+}
+
+.portfolio-container {
+  position: relative;
+}
+
+.about-container {
+  line-height: 23px;
+}
+
+.contact-container {
+  margin-bottom: 100px;
+}
+
+/*Define section in the direction of columns to add content by rows
+  Each section consists of two blocks: section-title and section-card*/
+.section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    justify-content:content;
+    align-items: center;
+}
+
+/*Section title*/
+.section-title {
+  background-color: rgb(254 217 111);
+  padding: 6px 10px 6px 8px;
+  border-radius: 2px;
+  font-style: italic;
+  font-family: Permanent Marker;
+  font-weight:300;
+  font-size: 24px;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  text-align: center;
+  width: fit-content;
+  margin-bottom: 25px;
+}
+
+.contact-container .section-title {
+  background-color: transparent;
+  border-bottom: 3px solid rgb(254 217 111);
+}
+
+
+/* Section card in the direction of rows, which will take new content by columns  */
+.section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  max-width: 500px;
+  /* background-color: rgba(0, 0, 0, 0.211);  */
+  /* padding: 10px;   */
+}
+
+.section-card .left {
+  flex:1;
+}
+
+.section-card .right {
+  flex:1
+}
+
+/* Futher specs for the about section */
+.about-card .left {
+  /* position: relative; */
+  max-width: 500px;
+  align-self: center;
+}
+
+.about-card .right {
+  max-width: 500px;
+}
+
+.portrait-image {
+  display: block;
+  width: 50%;
+  object-fit:contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  overflow:hidden;
+}
+
+/* Futher specs for the skill section */
+.skill-card p {
+  line-height: 28px;
+}
+
+.skill-card .left {
+  line-height: 28px;
+  max-width: 500px;
+  /* margin-right: 25px; */
+  /* background-color: rgba(0, 0, 0, 0.211); */
+}
+
+.skill-card .right {
+  max-width: 500px;
+  margin-left: 0px;
+  margin-top: 5px;
+  /* background-color: rgba(0, 0, 0, 0.202); */
+}
+
+
+.skill-category {
+  font-weight: bold;
+}
+
+.skill {
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.skill .name {
+  flex:1;
+  font-family:open Sans, sans-serif;
+  font-size: 15px;
+  /* margin-right: 100px; */
+}
+
+.skill .level {
+  flex:1;
+  width: 100%;
+}
+
+/* Futher specs for the job & education section */
+.job-card {
+  display:flex;
+  justify-content:flex-start;
+  align-self:flex-start;
+  /* background-color: rgba(0, 0, 0, 0.103); */
+}
+
+.job-card .left {
+  /* text-align: right; */
+  position: relative;
+  color:gray;
+  max-width: 500px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  border-left: 1px solid gray;
+  /* background-color: rgba(0, 0, 0, 0.103); */
+}
+
+.job-card .right {
+  border-left: 1px solid gray;
+  padding-left: 25px;
+  position: relative;
+  max-width: 500px;
+  margin: 0px;
+  /* background-color: rgba(0, 0, 0, 0.125); */
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgb(177, 169, 169);
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: -9px;
+  top: 2px;
+}
+
+.role {
+    font-weight:bold;
+    padding-bottom: 6px;
+}
+
+.company {
+  padding-left: 0px;
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color:gray;
+  font-family: Josefin Sans;
+  text-align:left;
+}
+
+
+.logo {
+    width: 50px;
+    object-fit: contain;
+    /* position: absolute; */
+    /* right: -5px; */
+    /* top: 5px; */
+}
+
+.school-logo {
+  width: 70px;
+  object-fit: contain;
+  margin-left: -12px;
+}
+
+
+/* Futher specs for other section */
+.other-card .left {
+  line-height: 24px;
+  margin-left: 25px;
+  max-width: 600px;
+  /* background-color: rgba(0, 0, 0, 0.125); */
+}
+
+
+
+/* New structure for the portfolio gallery, in the form of grid */
+.gallery {
+  display: grid;
+  grid-template-rows: 1fr;
+  /* column-gap: 30px; */
+  max-width: 500px;
+  background-color:rgba(0, 170, 255,0.2);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.project {
+  /* max-width: 500px; */
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+
+.project img {
+  height:100%;
+  width: 100%;
+  object-fit:cover;
+}
+
+.project .info {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  top:0;
+  left:0;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  background-color: aliceblue;
+  background: rgba(256,256,256,0.5);
+  /* color:whitesmoke; */
+  opacity: 0;
+}
+
+.p2 .info {
+  background: rgba(0,0,0,0.5);
+}
+
+.info button {
+  background-color: transparent;
+  border: none;
+}
+
+.h4 {
+  font-weight: bold;
+  font-size:18px;
+  margin-bottom: 20px;
+}
+
+.h41 {
+  margin-bottom:5px;
+  width: fit-content;
+  text-align: center;
+  border-bottom: 1px solid rgb(177, 169, 169);
+}
+
+.h41 p {
+  font-size:18px;
+  padding-bottom: 5px;
+  line-height: 28px;
+}
+
+.notes {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  /* border-top: 1px solid rgb(177, 169, 169); */
+  width: fit-content;
+}
+
+.project .info:hover {opacity: 1;}
+
+.project-box-container {
+  position:absolute;
+  opacity: 0;
+  top:50px;
+  transition: all 0.4s;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin:35px;
+  align-items: center;
+  text-align: center;
+  /* background-color: white; */
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.close-x {
+  position: absolute;
+  right:20px;
+  top: 0px;
+  font-size: 25px;
+  color: rgba(128, 128, 128, 0.726);
+}
+
+.project-box-container:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color:  rgb(255, 242, 204);;
+  margin:35px;
+  max-width: 600px;
+}
+
+.slide p, ul li {
+  /* font-family: Roboto; */
+  font-size: 15px;
+}
+
+
+.slide p,ul {
+  line-height: 27px;
+}
+
+.slide .h5 {
+  color: rgb(43, 112, 222);
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.slide .h4 {
+  align-items: center;
+  text-align: center;
+  font-size: 21px;
+}
+
+.slide .content {
+  flex:1;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  /* padding-left:30px; */
+  padding-top: 20px;
+}
+
+.slide .image {
+  flex:1;
+  /* max-width: 600px; */
+  width: 100%;
+}
+
+.slide img {
+  height:100%;
+  width: 100%;
+  object-fit:contain;
+}
+
+/* Futher specs for the contact section */
+.contact-card {
+  display: flex;
+  margin-top: 0px;
+  /* background-color: rgba(0, 0, 0, 0.103); */
+  /* padding: 0; */
+  /* flex-direction: column; */
+}
+
+.contact-card .left,.right {
+  max-width: 500px;
+  height: max-content;
+  margin: 15px;
+  margin-top: 0px;
+  /* background-color: bisque; */
+}
+
+.contact-card .row {
+  display: flex;
+  max-width: 500px;
+  flex:1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.contact-card .outro {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+
+.sender {margin-right: 10px;}
+
+.contact-card button {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(254 217 111);
+  border:none;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* line-height: 1.5; */
+  border-radius: 5px;
+}
+
+.logos {
+  justify-content: center;
+}
+
+.web-logo {
+  width: 20px;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+
+/* Futher specs for the signcature section */
+.signature {
+  margin-bottom: 80px;
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  text-align: center;
+  width: fit-content;
+}
