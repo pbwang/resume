@@ -9,6 +9,7 @@
   flex-direction: column;
   background-color: aliceblue;
   margin:-10px;
+  min-width: fit-content;
 }
 
 
@@ -20,7 +21,7 @@
 
 .bg-image {
   height:100vh;
-  background-image:url(../image/blue-sky-with-puffy-white-clouds.jpg);
+  background-image:url(../image/blue-sky-with-puffy-white-clouds.jpeg);
   background-position: 80%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,7 +191,7 @@ in the profile page */
   width: 95%;
   object-fit:cover;
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 20px;
   border-radius: 50%;
   overflow:hidden;
@@ -326,20 +327,21 @@ in the profile page */
 /* New structure for the portfolio gallery, in the form of grid */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 30px;
+  grid-template-columns: 400px 400px 400px;
+  column-gap: 20px;
   background-color:rgba(0, 170, 255,0.2);
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  padding-top: 20px;
   border-radius: 20px;
-  max-width: 1000px;
+  /* max-width: fit-content; */
   /* margin-right: 8px; */
 }
 
 .project {
   width: 100%;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   position: relative;
 }
 
@@ -421,7 +423,7 @@ in the profile page */
   display: flex;
   flex-direction: column;
   width: fit-content;
-  margin:35px;
+  margin:30px;
   align-items: center;
   text-align: center;
   /* background-color: white; */
@@ -431,7 +433,7 @@ in the profile page */
 
 .close-x {
   position: absolute;
-  right:20px;
+  right:13px;
   top: 0px;
   font-size: 25px;
   color: rgba(128, 128, 128, 0.726);
@@ -447,7 +449,7 @@ in the profile page */
   flex-direction: row;
   padding: 15px;
   background-color:  rgb(255, 242, 204);;
-  margin:35px;
+  margin:30px;
 }
 
 .slide p, ul li {
@@ -687,10 +689,10 @@ in the profile page */
   margin-right:0px;
   }
 
-  .gallery {
+  .gallery { 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-auto-flow: column;
     column-gap: 0px;
     /* display:flex;
@@ -699,13 +701,15 @@ in the profile page */
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+    padding-top: 20px;
+    row-gap: 20px;
     border-radius: 20px;
   }
   
   
   .project {
     width: fit-content;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     position: relative;
     flex:1;
   }
