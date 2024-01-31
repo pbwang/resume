@@ -327,8 +327,10 @@ in the profile page */
 /* New structure for the portfolio gallery, in the form of grid */
 .gallery {
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 500px 500px;
   column-gap: 20px;
+  row-gap: 20px;
   background-color:rgba(0, 170, 255,0.2);
   padding-left: 20px;
   padding-right: 20px;
@@ -410,7 +412,7 @@ in the profile page */
 .project-box-container {
   position:absolute;
   opacity: 0;
-  top:50px;
+  top:75px;
   transition: all 0.4s;
   visibility: hidden;
   justify-content: center;
@@ -692,7 +694,7 @@ in the profile page */
   .gallery { 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-auto-flow: column;
     column-gap: 0px;
     /* display:flex;
